@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>    
+</head>
+<body>
+    <!-- ① <form> 태그들을 이용하여 작성하시오.
+    ② ‘여름방학 특강 신청하기＇제목은 <h3> 테그를 이용하여 작성하시오.
+    ③ 버튼은 <button> 태그를 이용하고, 학과는 '컴퓨터공학과', ‘국어국문학과’, ‘영어영문학과’, ‘전자 융합과’로 작성하시오
+    ④ 교육과정 input 속성은 읽기만 가능한 readonly로 지정하여 작성하시오.
+    ⑤ <ul> ~ <li> 태그 이용해 작성하시오.
+    ⑥ <출력 결과물> 과 같이 출력되도록 작성하시오.
+    ⑦ 파일명은 ex_form05.html 로 작성하시오. -->
+    
+        <h3>여름방학 특강 신청하기</h3>
+        <form action="#" method="get">
+        <fieldset>
+            <legend>교육과정</legend>
+            <ul>
+                <li class="level">
+                    <label class="title">영어회화</label>
+                    <input type="text" name="eng" value="오전 9:00 ~ 11:00" readonly />
+                    <span>(초급레벨)</span>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>신청자 기본 정보</legend>
+            <ul>
+                <li>
+                    <label class="title">이름</label>
+                    <input type="text"  placeholder="예:홍길동">
+                </li>
+                <li>
+                    <label class="title">이메일</label>
+                    <input type="email"  placeholder="예:abcd@gmail.com" >
+                </li>
+                <li>
+                    <label class="title">비밀번호</label>
+                    <input type="password" placeholder="비밀번호 입력">
+                </li>
+                <li>
+                    <label class="title">학과</label>
+                    <select>
+                        <option name="major" selected>학과를 선택하세요</option>
+                        <option name="major" value="컴퓨터공학과">컴퓨터공학과</option>
+                        <option name="major" value="국어국문학과">국어국문학과</option>
+                        <option name="major" value="영어영문학과">영어영문학과</option>
+                        <option name="major" value="전자 융합과">전자 융합과</option>
+                    </select>
+                </li>
+                <li class="gender_item">
+                    <span class="title">성별</span>
+                    <input type="radio" name="gender" id="man" />
+                    <label for="man">남성</label>
+                    <input type="radio" name="gender" id="woman" />
+                    <label for="woman">여성</label>                    
+                </li>
+                <li class="hobby_item">
+                    <span class="title">관심사</span>
+                    <input type="checkbox"  name="hobby" id="ho1" />
+                    <label for="ho1">여행</label>                    
+                    <input type="checkbox"  name="hobby" id="ho2" />
+                    <label for="ho2">게임</label>                    
+                    <input type="checkbox"  name="hobby" id="ho3" />
+                    <label for="ho3">공연</label>                    
+                    <input type="checkbox"  name="hobby" id="ho4" />
+                    <label for="ho4">운동</label>                    
+                    <input type="checkbox"  name="hobby" id="ho5" />
+                    <label for="ho5">기타</label>                    
+                </li>
+            </ul>
+        </fieldset>
+        <!-- 의미없는 태그 <div>이용 : 그룹을 묶을때 사용하면 유용함 -->
+        <div class="btn">
+            <button type="submit">수강신청</button>
+            <button type="reset">다시쓰기</button>
+        </div>
+    </form>
+</body>
+</html>
