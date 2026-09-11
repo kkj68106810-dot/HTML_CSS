@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>CSS 설명</title>  
+    <style>
+        p {
+            color:red;
+        }
+        /* p라는 태그의 class이름이 center인 경우만 CSS 적용 */
+        p.center {
+            color: dodgerblue;
+        }
+        /* P라는 태그의 자식 / 자손 클래스 이름이 center인 경우 css 적용 */
+        p .center {
+            color: green;
+        }
+        p span .center{
+            color: hotpink;
+        }
+        /* div span => div안의 자식/자손 모두 css 적용 */
+        div span{
+            background-color: aquamarine;
+        }
+        /* div > span : div안의 자식만 css적용 */
+        div > span {
+            color : darkviolet
+        }
+        /* 공통CSS */
+        div.center {
+            background-color : yellow;
+        }        
+    </style>  
+</head>
+<body>
+    <p class="center">이건 파란색</p>
+
+    <div class="center">이건 선택 안됨1</div>
+    <div><span>이건 선택 안됨2</span></div>
+    <div class="center center02"><span>이건 선택 안됨2</span></div>
+    <div><em><span>이건 선택 안됨3</span></em></div>
+
+    <p><span class="center">이건 선택 안됨</span></p>
+    <p><span><em class="center">이건 선택 안됨</em></span></p>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>        
+    <script>
+        function changeEmail(value) {
+            const val = document.getElementById('inputEmail');
+            val.value = value;
+        }
+    </script>
+    <style>
+        *{
+            /* 모든 요소의 기본 여백을 제거한다. */
+            padding: 0;
+            margin: 0;
+        }
+        h1
+        , p {
+            text-align: center;            
+        }         
+        form {
+            background-color: #F8F8F8;
+            padding: 20px;
+            width: 1000px;
+            margin: 0 auto;
+            border-radius: 10px;                        
+        }
+        input[type='text']::placeholder
+        , input[type='email']::placeholder
+        , input[type='password']::placeholder {
+            font-size: 12px;
+        }
+        ul {
+            list-style: none;
+        }
+        .vertical {
+            vertical-align: top;
+        }
+        .btn {
+            text-align: center;
+        }
+        .title {
+            display: inline-block;
+            width: 150px;
+            font-weight: bold;
+        }
+        textarea {
+            width: 300px;
+            height: 100px;
+        }
+        input[type='checkbox']
+        , input[type='radio'] {
+            margin-right: 5px;
+        }
+        input[type='text']
+        , input[type='email']
+        , input[type='password']
+        , select{
+            width: 200px;
+            padding: 6px 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            /* 350px 패디여백까지 포함한 크기로 지정하는 CSS */
+            box-sizing: border-box;
+        }
+        ul{
+            padding: 10px;
+        }
+        .btn {
+            /* 버튼을 가운데 정렬 */
+            text-align: center;
+        }
+        /* 신청과 취소버튼 기본 공통 CSS */
+        .btn button[type='submit']
+        , .btn button[type='reset'] {
+            padding:10px 20px;
+            /* 기본 테두리 제거 */
+            border: none;
+            border-radius: 5px;
+            font-size: 15px;
+            cursor: pointer;            
+        }
+        .btn button[type='submit'] {
+            background-color: #4caf50;
+            color: white;
+        }
+        .btn button[type='reset'] {
+            background-color: #f44336;
+            color: white;
+        }
+        .phone {
+            width: 70px;            
+        }
+        .ph {            
+            width: 100px;
+        }        
+        input[type='checkbox']
+        , input[type='radio'] {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!--  
+        ①<form> 태그를 이용하여 다음페이지의 <출력 결과물>과 같이 html 파일을 작성하시오.
+        ②버튼은 <button> 태그를 이용하여 작성하시오.
+        ③Font-size : 13px로 지정하여 작성하시오.
+        ④Sign Up는 <h1> 태그를 이용하여 작성하시오.
+        ⑤‘Become a member of Andrew's Company, and enjoy a variety of benefits.’ <p> 태그를 이용하여 작성하시오.
+        ⑥<ul> ~ <li> 태그 이용해 작성하시오.
+        ⑧CSS는 <출력 결과물>을 보고 알아서 작성하시오.
+        ⑨<출력 결과물> 과 같이 출력되도록 작성하시오.
+        ⑦ label은 inline이기때문에 Display 를 이용하여 inline-block로 속성을 변경하여 CSS를 작성하시오.
+        ⑩CSS 파일은 별도로 작성하지 말고 <head>…..</head> 태그 안에 작성하시오.
+        ⑪파일명은 ex_form06.html 로 작성하시오. 
+    -->
+    <h1>Sign Up</h1>
+    <br/>
+    <p>Become a member of Andrew's Company, and enjoy a variety of benefits.</p>
+    <br/>
+
+    <form action="#" method="get">        
+        <ul>
+            <li>
+                <label class="title">Name</label>
+                <input type="text" placeholder="이름을 입력하세요." />
+            </li>            
+        </ul>
+        <ul>
+            <li>
+                <label class="title">ID</label>
+                <input type="text" placeholder="ID를 입력하세요." />
+            </li>            
+        </ul>
+        <ul>
+            <li>
+                <label class="title" >Password</label>
+                <input type="password" placeholder="암호를 입력하세요." />
+            </li>            
+        </ul>
+        <ul>
+            <li>
+                <label class="title">Confirm Password</label>
+                <input type="password" placeholder="암호를 다시 입력하세요." />
+            </li>            
+        </ul>
+        <ul>
+            <li>
+                <label class="title">Mobile</label>
+                <select class="phone">
+                    <option name="phone" selected>010</option>
+                    <option name="phone">016</option>
+                    <option name="phone">018</option>
+                </select>
+                <input type="text" class="ph">-<input type="text" class="ph">
+            </li>            
+        </ul>
+        <ul>
+            <li>
+                <label class="title">Email</label>
+                <input type="text" placeholder="이메일을 입력하세요." />@<input type="text" id="inputEmail" />
+                <select onChange="changeEmail(this.value)">
+                    <option name="selmail" selected value="">Direct Input</option>
+                    <option name="selmail" value="naver.com">naver.com</option>
+                    <option name="selmail" value="daum.net">daum.net</option>
+                    <option name="selmail" value="gmail.com">gmail.com</option>
+                </select>
+            </li>            
+        </ul>
+        <ul>
+            <li>
+                <label class="title">Whether to receive email</label>
+                <input type="checkbox" id="acc" /><label for="acc">Acceptance</label>
+            </li>            
+        </ul>
+        <ul>
+            <li>
+                <label class="title">Interest</label>
+                <input type="checkbox" name="interest" id="inter1"  />
+                    <label for="inter1">Movie</label>
+                <input type="checkbox" name="interest" id="inter2"  />
+                    <label for="inter2">Theater</label>
+                <input type="checkbox" name="interest" id="inter3"  />
+                    <label for="inter3">Travel</label>
+                <input type="checkbox" name="interest" id="inter4"  />
+                    <label for="inter4">Mountain climbing</label>
+                <input type="checkbox" name="interest" id="inter5"  />
+                    <label for="inter5">Visiting a restaurant</label>
+                <input type="checkbox" name="interest" id="inter6"  />
+                    <label for="inter6">Volunteer</label>
+                <input type="checkbox" name="interest" id="inter7"  />
+                    <label for="inter7">Etc</label>
+            </li>            
+        </ul>
+        <ul>
+            <li>
+                <label class="title">Gender</label>
+                <input type="radio" name="gender" id="man" />
+                    <label for="man">Male</la>
+                <input type="radio" name="gender" id="woman" />
+                    <label for="woman">Female</label>
+            </li>            
+        </ul>
+        <ul>
+            <li>
+                <label class="title">Pather learned</label>
+                <select>
+                    <option name="learned" selected>choose</option>
+                    <option name="learned">Internet</option>
+                    <option name="learned">Acquaintance introduction</option>
+                    <option name="learned">etc</option>                    
+                </select>
+            </li>            
+        </ul>
+        <ul>
+            <li>
+                <label class="title vertical" >Memo</label>
+                <textarea></textarea>
+            </li>            
+        </ul>
+        <div class="btn">
+            <button type="submit">Sign Up</button>
+            <button type="reset">Cancel</button>
+        </div>        
+    </form>
+
+</body>
+</html>
