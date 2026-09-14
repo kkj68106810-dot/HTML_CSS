@@ -3,55 +3,145 @@
 <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>마켓컬리 회원가입</title>    
+    <title>마켓컬리 회원가입</title>
     <link rel="stylesheet" href="styleCss/kurly_join.css">
 </head>
-<body>    
+<body>
+<div class="input_wrap">
     <h2 class="h2">회원가입</h2>
-    <br />
-    <br />
     <div class="require_input"><span class="astric">*</span>필수입력사항</div>
     <form action="#" method="get">
-    <ul>
-        <li>
-            <label>아이디<input type="text" class="label_input" /></label>
-        </li>
-        <li>
-            <label>비밀번호<input type="password" class="label_input" /></label>
-        </li>
-        <li>
-            <label>비밀번호 확인<input type="password" class="label_input" /></label>
-        </li>
-        <li>
-            <label>이름<input input="text" class="label_input" /></label>
-        </li>
-        <li>
-            <label>이메일<input type="text" class="label_input" /></label>
-        </li>
-        <li>
-            <label>휴대폰<input type="text" class="label_input" /></label>
-        </li>
-        <li>
-            <label>주소<button type="submit" /></label>
-        </li>
-        <li>
-            <label>성별
-                <input type="radio" name="gender" />남자
-                <input type="radio" name="gender" />여자
-                <input type="radio" name="gender" />선택안함
-            </label>
-        </li>
-        <li>
-            <label>생년월일<button type="submit" /></label>
-        </li>
-        <li>
-            <label>추가입력 사항
-                <input type="radio" /> 친구초대 추천인 아이디
-            </label>
-        </li>
+
+        <!-- 아이디 입력 -->
+        <div class="form-row">
+            <label for="user_id" class="label_input">아이디</label>
+            <div class="form-content">
+                <input class="input-text" id="user_id" type="text" placeholder="아이디를 입력해주세요" />
+            </div>
+        </div>
+
+
+        <div class="form-row">
+            <label for="pw" class="label_input">비밀번호</label>
+            <div class="form-content">
+                <input class="input-text" id="pw" type="password"  placeholder="비밀번호를 입력해주세요">
+            </div>
+        </div>
+
+
+        <div class="form-row">
+            <label for="pwcon" class="label_input">비밀번호 확인</label>
+            <div class="form-content">
+                <input class="input-text" id="pwcon" type="password"  placeholder="비밀번호를 한번 더 입력해주세요">
+            </div>
+        </div>
+
+
+        <div class="form-row">
+            <label class="label_input" for="name">이름</label>
+            <div class="form-content">
+                <input class="input-text" id="name" type="text" placeholder="이름을 입력해주세요">
+            </div>
+        </div>
+
+
+        <div class="form-row">
+            <label class="label_input" for="mail">이메일</label>
+            <div class="form-content">
+                <input class="input-text" id="mail" type="text" placeholder="예: marketkurly@kurly.com">
+            </div>
+        </div>
+
+
+        <div class="form-row">
+            <label class="label_input" for="phone">휴대폰</label>
+            <div class="form-content">
+                <input class="input-text" id="phone" type="text" style="width:80%" placeholder="숫자만 입력해주세요">
+                <button type="button" class="btn-action">인증번호 받기</button>
+            </div>
+        </div>
+
+
+        <div class="form-row">
+            <label class="label_input" for="address">주소</label>
+            <div class="form-content"><button id="address" class="btn-action" type="submit" style="width:100%">주소검색</button></div>
+        </div>
+
+
+        <div class="form-row">
+            <span class="form-label">성별</span>
+            <div class="form-content">
+                <div class="radio-group">
+                    <label for="gender-male" class="radio-label">
+                        <input type="radio" id="gender-male" name="gender" value="male"> 남자
+                    </label>
+                    <label for="gender-female" class="radio-label">
+                        <input type="radio" id="gender-female" name="gender" value="female"> 여자
+                    </label>
+                    <label for="gender-none" class="radio-label">
+                        <input type="radio" id="gender-none" name="gender" value="none" checked> 선택안함
+                    </label>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-row">
+            <label class="label_input" for="birth">생년월일</label>
+            <div class="form-content"><input id="birth" class="input-text" type="text" placeholder="YYYY / MM / DD" style="text-align: center"></div>
+        </div>
+
+
+        <div class="form-row">
+            <span class="form-label">추가입력 사항</span>
+            <div class="form-content">
+                <div class="radio-group">
+                    <label for="add-recommend" class="radio-label">
+                        <input type="radio" id="add-recommend" name="add-option" value="recommend"> 친구초대 추천인 아이디
+                    </label>
+                </div>
+            </div>
+        </div>
 
         <!-- 선긋기 -->
-    </ul>
+        <div class="divider"> </div>
+
+        <div class="form-row">
+            <span class="form-label">이용약관 동의</span>
+            <div class="form-content">
+                <div class="terms-container">
+                    <div>
+                        <input type="checkbox" name="all_terms" id="all_terms">
+                        <label for="all_terms">전체동의 합니다.</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="all_terms" id="terms">
+                        <label for="all_terms">컬리 이용약관 동의(필수)</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="all_terms" id="individual" >
+                        <label for="individual">개인정보 수집이용(필수)</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="all_terms" id="event" >
+                        <label for="event">이벤트 및 혜택정보 발송을 위한 수집·이용(선택)</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="all_terms" id="ad">
+                        <label for="ad">광고성 정보수신(선택)</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="all_terms"  id="age">
+                        <label for="age">본인은 만 14세 이상입니다.(필수)</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 가입하기 버튼 -->
+        <button type="submit" class="btn-submit">가입하기</button>
+
     </form>
+</div>
 </body>
 </html>
