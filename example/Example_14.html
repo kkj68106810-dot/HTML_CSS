@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        body {
+            background: #eee;
+        }
+        .card {
+            display: flex;
+            justify-content: center;
+        }
+        .card .box {
+            width: 300px;
+            box-shadow: 10px 10px 0 gray;
+            border-radius: 10px;
+            text-align: center;
+            background-color: white;
+            margin:10px;            
+        }        
+        .card .box p{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 280px;
+            font-size: 13px;
+            color:#555
+        }
+        .card .box img{
+            width: 300px;
+            height: 230px;
+            border-radius: 10px 10px 0 0;
+        }
+        .card .box h2{
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <!-- ① 상품 카드 3개가 가로로 나열된 페이지를 작성하시오.
+    ② 카드는 <div class="card">, flex 또는 inline-block으로 가로 배치하시오.
+    ③ 각 카드에 box-shadow, border-radius 적용하시오.
+    ④ 상품명은 <h2> 태그로 작성하시오.
+    ⑤ 상품 설명은 <p> 태그, 한 줄 넘칠 경우 overflow: hidden, text-overflow: ellipsis, white-space: nowrap 적용
+    하시오.
+    ⑥ CSS는 <head> 안에 작성하시오.
+    ⑦ 파일명은 Example_14.html로 작성하시오. -->
+    <div class="card">
+        <div class="box">
+            <img src="../images/product1.jpg" alt="product1" >
+            <h2>Wireless EarBurds</h2>
+            <p>This is a long product description text that will be truncated</p>
+        </div>
+        <div class="box">
+            <img src="../images/product2.jpg" alt="product2" >
+            <h2>Smart Watch</h2>
+            <p>Track your health and fitness goals easily every single day</p>
+        </div>
+        <div class="box">
+            <img src="../images/product3.jpg" alt="product1" >
+            <h2>Bluetooth Speaker</h2>
+            <p>Portable speaker with powerful sound and long battery life</p>
+        </div>    
+            
+        
+        
+    </div>
+
+</body>
+
+</html>
