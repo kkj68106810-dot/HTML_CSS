@@ -1,0 +1,100 @@
+
+@charset "UTF-8";
+
+/* ① <body> 태그 안에 <div class="login-wrap">을 작성하고, 그 안에 로고(<h1>NAVER</h1>)와 로그인 박스
+(<div class="login-box">)를 작성하시오.
+② 로고는 글자색 #03c75a(초록), font-weight:900으로 크게 강조하여 작성하시오.
+③ <div class="login-box">는 border와 border-radius를 지정해 카드 형태로 만들고, 아이디·비밀번호 입력창
+(<input>) 2개를 작성하시오. 입력창은 border를 없애고 border-bottom만 남겨 밑줄 스타일로 만드시오.
+하고, 부모 요소에 overflow:hidden으로 적용하시오.
+#03c75a, 흰색 글자로 강조하시오.
+④ "로그인 상태 유지" 체크박스(label+checkbox)는 float:left로, "IP 보안" 텍스트는 float:right로 한 줄에 배치
+⑤ "패스키 로그인" 버튼과 "로그인" 버튼은 display:inline-block으로 나란히 배치하고, "로그인" 버튼은 배경색 
+⑥ 하단에 "QR 코드 로그인 | 일회용 번호 로그인" 링크를 가운데 정렬로 작성하시오.
+⑦ 파일명은 Example_login.html, CSS 파일명은 style_login.css로 작성하시오 */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.login-wrap{
+    display: inline-block;
+    width: 450px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px 20px;
+    margin: 0 15px;
+    text-align: center;
+    height: 400px;
+}
+
+h1 {
+    color:#03c75a;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom:15px
+}
+
+.login-box{
+    border:1px solid lightgray;
+    border-radius: 10px;
+    width: 400px;
+    height: 300px;
+}
+
+input[type="text"] {
+    align-items: center;
+    width: 360px;
+    height: 30px;
+    border: none;
+}
+
+input[type="text"]::placeholder {
+    padding-left: 10px;
+}
+
+.login-form-wrapper .login-remember {
+    float: left;
+    /*margin: 10px;*/
+}
+
+.login-form-wrapper .login-remember .span-div{
+    float:right;
+    /*margin:10px*/
+}
+
+.checkbox-form {
+    margin: 20px
+}
+
+div .login-form-wrapper{
+    overflow: hidden;
+    margin-top:10px;
+}
+
+.login-id input{
+    border-bottom: 1px solid gray;
+}
+
+.login-pwd input{
+    border-bottom: 1px solid gray;
+}
+
+div .login-form-wrapper .login-id{
+    margin-bottom: 10px;
+    margin-top: 20px;
+
+}
+
+
+
+div .login-form-wrapper .login-pwd{
+
+}

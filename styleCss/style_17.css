@@ -1,0 +1,66 @@
+/* 
+① <body> 태그 안에 <header> 태그를 작성하고, 그 안에 로고(div.logo), 메뉴(nav), 유틸 영역(div.util)을 
+작성하시오.
+② 로고는 <h1>OOZY COFFEE</h1>로 작성하고 float:left로 왼쪽에 배치하시오.
+③ <nav> 안에 <ul>과 5개의 <li>(ABOUT US, MENU, STORE, FRANCHISE, COMMUNITY)를 작성하고, <li>
+는 display:inline-block으로 지정하여 가로로 나열하시오. <nav>는 float:left로 로고 오른쪽에 배치하시오.
+배치하시오.
+④ 오른쪽에는 "점주님 공간" 텍스트(span)와 "프랜차이즈" 버튼(button)을 작성하고, div.util을 float:right로 
+⑤ 프랜차이즈 버튼은 배경색 #1f5c3f(초록), border-radius로 둥글게, 글자색은 흰색으로 스타일링하시오.
+⑥ <header>에 overflow:hidden을 적용하여 float로 인해 높이가 무너지지 않도록 하시오.
+⑦ 파일명은 Example_17.html, CSS 파일명은 style_17.css로 작성하시오. 
+*/
+
+@charset "utf-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    color:#1f5c3f;
+}
+
+body {
+    font-family: sans-serif;    
+    text-align: center;
+    padding: 10px 0;
+}
+
+header {
+    overflow: hidden;
+    border-bottom: 1px solid gainsboro;
+    padding-left: 15px;
+}
+
+h1 {
+    float: left;    
+}
+
+nav {
+    float: left;    
+    margin:20px;
+    text-align: center;
+    padding-left: 100px;
+}
+
+ul li {
+    display:inline-block;
+    margin-right: 20px;
+}
+
+.util{
+    float: right;    
+}
+
+.util .franchise_btn {
+    width: 100px;
+    height: 40px;
+    background-color: #1f5c3f;
+    border-radius: 25px;
+    color:white;
+    border: none;
+    margin: 15px;
+}
