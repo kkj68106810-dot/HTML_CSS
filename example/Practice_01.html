@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>실습</title>
+    <link rel='stylesheet' href='../styleCss/practice.css'>
+</head>
+<body>
+<!--① position 속성의 relative, absolute를 이용하여 작성하시오.-->
+<!--② <body> 태그아래의html을 이용하여작성하시오.-->
+<!--③ .item은 float:left로 작성하고, .thumb는 width:96px; height:96px;, position:relative로 작성하시오.-->
+<!--④ .badge는 position:absolute; top:0; left:0;로 썸네일 모서리에 겹치도록 배치하고, 종류에 따라 배경색을-->
+<!--다르게지정하시오. (시간배지: 빨강계열, 멤버십배지: 보라계열)-->
+<!--⑤ 원래가격(.orig)은 text-decoration: line-through, 할인율(.percent)은 빨간색 굵게, 판매가(.price)는 글자-->
+<!--를더크고굵게작성하시오.-->
+<!--⑥ 파일명은Practice_01.html로 작성하시오.-->
+
+
+    <div class="container">
+        <div class="product-container">
+
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="badge countdown">06:53:30 남음</div>
+                    <img src="../images/productimg1.jpg" alt="product-img1">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">한입 그릴감이 좋다 바르닭 한입 닭가슴살입니다.</div>
+                    <div class="product-price">
+                        <div class="product-price-box">4,400원</div>
+                        <span class="percent">56%</span>
+                        <div class="product-real-price">1,900원</div>
+                    </div>
+                    <div class="product-review">
+                        <div class="product-start">★4.82</div>
+                        <div class="review">리뷰 117</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="badge membership">멤버십 전용</div>
+                    <img src="../images/productimg2.jpg" alt="product-img2">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">[이연복의 목란] 신상 짜장면 2종</div>
+                    <div class="product-price">
+                        <div class="product-price-box">11,900원</div>
+                        <span class="percent">16%</span>
+                        <div class="product-real-price">9,980원~</div>
+                    </div>
+                    <div class="product-review">
+                        <div class="product-start">★5.0</div>
+                        <div class="review">리뷰 1</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="badge membership">멤버십 전용</div>
+                    <img src="../images/productimg3.jpg" alt="product-img3">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">[오설록] 그린티 랑드샤(10g X 10개)</div>
+                    <div class="product-price">
+                        <div class="product-price-box">14,000원</div>
+                        <span class="percent">25%</span>
+                        <div class="product-real-price">10,500원</div>
+                    </div>
+                    <div class="product-review">
+                        <div class="product-start">★4.82</div>
+                        <div class="review">리뷰 117</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
