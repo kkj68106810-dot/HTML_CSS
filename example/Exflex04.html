@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex 연습문제4</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f2f3f2;
+            /*margin: 40px auto;*/
+            height: 500px;
+        }
+        .login-container {
+            background: #ffffff;
+            width: 500px;
+            border-radius: 5px;
+            padding: 30px;
+        }
+        .login-container form .login-box {
+            display: flex;
+            justify-content: center;
+            margin: 10px auto;
+            padding-bottom: 10px;
+        }
+        /* label 인라인 태그에 부모요소인 login-box에 display : flex를
+            지정하므로 인라인 요소도 너비, 높이를 가질 수 있게 변함을 주의 하자
+        */
+        .login-box label{
+            width: 120px;
+        }
+        .login-box input {
+            width: 360px;
+            height: 30px;
+        }
+        .btn {
+            width: 440px;
+            height: 30px;
+            /*margin: 10px;*/
+            background-color: green;
+            border: none;
+            border-radius: 5px;
+            color: white;
+        }
+        .btn:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <form action="#" method="post">
+            <div class="login-box name">
+                <label for="name" >이름</label><input type="text" placeholder="홍길동" id="name">
+            </div>
+            <div class="login-box email">
+                <label for="email" >이메일 </label><input type="email" placeholder="example@gmail.com" id="email">
+            </div>
+            <div class="login-box pw">
+                <label for="pw" >비밀번호</label><input type="password" id="pw">
+            </div>
+            <div class="login-box pw_confirm">
+                <label for="pwchk" >비밀번호 확인</label><input type="password" id="pwchk">
+            </div>
+            <button type="submit" class="btn submit">회원가입</button>
+        </form>
+    </div>
+
+</body>
+</html>
